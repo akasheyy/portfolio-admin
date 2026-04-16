@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
-import { Plus, Trash2, Globe, Star, X, Loader2, Upload, Edit3 } from "lucide-react";
+import { Plus, Trash2, Globe, Star, X, Loader2, Upload, Edit3, MessageCircle } from "lucide-react";
 
 const Dashboard = () => {
   const [projects, setProjects] = useState([]);
@@ -93,6 +93,17 @@ const Dashboard = () => {
     <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
       <div className="max-w-6xl mx-auto">
         
+        <div className="mb-6">
+          <nav className="flex flex-wrap gap-3 bg-white/80 backdrop-blur-sm rounded-2xl p-3 shadow-sm border border-slate-200">
+            <a href="/dashboard" className="px-4 py-2 rounded-xl font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all">
+              Projects
+            </a>
+            <a href="/contacts" className="px-4 py-2 rounded-xl font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">
+              Contacts
+            </a>
+          </nav>
+        </div>
+
         <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">Project Manager</h1>
